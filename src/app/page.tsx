@@ -1,7 +1,16 @@
 import Link from "next/link";
 import { Search, type SearchItem } from "@/components/Search";
 import { PricingTag } from "@/components/ToolCard";
-import { categories, getCategory, newThisWeek, tools, toolsInCategory } from "@/lib/data";
+import { TodayInBrief } from "@/components/TodayInBrief";
+import {
+  categories,
+  featuredTools,
+  getCategory,
+  latestEdition,
+  newThisWeek,
+  tools,
+  toolsInCategory,
+} from "@/lib/data";
 
 const searchItems: SearchItem[] = tools.map((t) => {
   const categoryName = getCategory(t.category)?.name ?? t.category;
@@ -23,7 +32,11 @@ const LEAD = { category: "meetings", headline: "Best AI tools for meeting notes"
 export default function Home() {
   const lead = getCategory(LEAD.category)!;
   const leadTools = toolsInCategory(LEAD.category);
+  // "New this week" comes from The Daily Prompt's new_tools. With none this
+  // week, the sidebar falls back to an editor's pick, labeled as such.
   const fresh = newThisWeek(5);
+  const sidebar = fresh.length ? fresh : featuredTools();
+  const sidebarTitle = fresh.length ? "New this week" : "Featured tools";
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -33,6 +46,12 @@ export default function Home() {
           examples={["meeting notes", "edit a podcast", "fix my code", "voiceover"]}
         />
       </section>
+
+      {latestEdition && (
+        <div className="mb-12">
+          <TodayInBrief edition={latestEdition} />
+        </div>
+      )}
 
       <div className="grid gap-10 lg:grid-cols-[1fr_20rem] lg:gap-0">
         <article className="lg:border-r lg:border-rule lg:pr-8">
@@ -68,9 +87,9 @@ export default function Home() {
 
         <aside className="lg:pl-8">
           <div className="rule-thick" />
-          <h2 className="label mt-3">New this week</h2>
+          <h2 className="label mt-3">{sidebarTitle}</h2>
           <ul className="mt-3 divide-y divide-rule">
-            {fresh.map((t) => (
+            {sidebar.map((t) => (
               <li key={t.slug} className="py-3">
                 <p className="label text-muted">{getCategory(t.category)?.name}</p>
                 <h3 className="font-display text-lg font-bold leading-tight">

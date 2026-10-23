@@ -6,7 +6,7 @@
   --paper: #ffffff;
   --ink: #111111;
   --hover: #555555;
-  --muted: #555555;
+  --muted: #3d3d3d; /* 11:1 on white; small labels stay readable */
   --rule: #bdbdbd;
   --tint: #f7f5ef;
 }
@@ -16,7 +16,7 @@
     --paper: #111111;
     --ink: #f2f0ea;
     --hover: #b5b5b5;
-    --muted: #b5b5b5;
+    --muted: #cfcfcf; /* 12:1 on #111 */
     --rule: #4a4a4a;
     --tint: #1c1c1c;
   }

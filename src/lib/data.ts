@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import toolsJson from "../../data/tools.json";
 import categoriesJson from "../../data/categories.json";
 
@@ -50,18 +52,59 @@ export function toolsInCategory(slug: string) {
     );
 }
 
-// "Now" is the newest `added` date in the data, so pages stay static and
-// the build is reproducible. Tools added within 7 days of it are "new".
-export function newThisWeek(limit = 6) {
-  const latest = tools.reduce((m, t) => (t.added > m ? t.added : m), "");
-  if (!latest) return [];
-  const cutoff = new Date(latest + "T00:00:00Z");
+export interface Edition {
+  date: string;
+  edition: number;
+  headline: string;
+  dek: string;
+  top_news: { title: string; summary: string; source: string; url: string; published?: string }[];
+  new_tools: { name: string; category: string; url: string; slug: string | null }[];
+  prompt_codes?: unknown;
+  poll?: unknown;
+}
+
+// Editions of The Daily Prompt, imported by scripts/import-editions.mjs.
+const editionsDir = path.join(process.cwd(), "data/editions");
+export const editions: Edition[] = fs.existsSync(editionsDir)
+  ? fs
+      .readdirSync(editionsDir)
+      .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
+      .map((f) => JSON.parse(fs.readFileSync(path.join(editionsDir, f), "utf8")) as Edition)
+      .sort((a, b) => b.date.localeCompare(a.date))
+  : [];
+
+export const latestEdition: Edition | undefined = editions[0];
+
+export function getEdition(date: string) {
+  return editions.find((e) => e.date === date);
+}
+
+// "New this week": tools from The Daily Prompt's new_tools in the editions of
+// the 7 days up to the latest edition, limited to ones in the directory
+// (every directory entry has been checked against its official site).
+export function newThisWeek(limit = 5) {
+  if (!latestEdition) return [];
+  const cutoff = new Date(latestEdition.date + "T00:00:00Z");
   cutoff.setUTCDate(cutoff.getUTCDate() - 6);
-  const cutoffStr = cutoff.toISOString().slice(0, 10);
-  return tools
-    .filter((t) => t.added >= cutoffStr)
-    .sort((a, b) => b.added.localeCompare(a.added) || a.name.localeCompare(b.name))
-    .slice(0, limit);
+  const from = cutoff.toISOString().slice(0, 10);
+  const seen = new Set<string>();
+  const out: Tool[] = [];
+  for (const e of editions.filter((e) => e.date >= from)) {
+    for (const nt of e.new_tools) {
+      const t = nt.slug ? getTool(nt.slug) : undefined;
+      if (t && !seen.has(t.slug)) {
+        seen.add(t.slug);
+        out.push(t);
+      }
+    }
+  }
+  return out.slice(0, limit);
+}
+
+// Until editions supply new tools, the sidebar shows a fixed editor's pick.
+const FEATURED = ["claude-code", "perplexity", "granola", "elevenlabs", "canva"];
+export function featuredTools() {
+  return FEATURED.map(getTool).filter((t): t is Tool => !!t);
 }
 
 export function hostname(url: string) {
