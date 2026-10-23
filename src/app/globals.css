@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Brand: black and white newspaper. No accent colors (see BRAND.md).
+   Dark mode inverts ink and paper so the page still reads as newsprint. */
+:root {
+  --paper: #ffffff;
+  --ink: #111111;
+  --hover: #555555;
+  --muted: #555555;
+  --rule: #bdbdbd;
+  --tint: #f7f5ef;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #111111;
+    --ink: #f2f0ea;
+    --hover: #b5b5b5;
+    --muted: #b5b5b5;
+    --rule: #4a4a4a;
+    --tint: #1c1c1c;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-hover: var(--hover);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-tint: var(--tint);
+  --font-masthead: var(--font-unifraktur);
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-baskerville);
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-baskerville), Georgia, serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+@layer components {
+  /* Section label: small spaced caps in Playfair. */
+  .label {
+    font-family: var(--font-playfair), Georgia, serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  /* 3px double rule: thick, gap, thin (matches the masthead). */
+  .rule-double {
+    box-sizing: border-box;
+    height: 8px;
+    border-top: 3px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+  }
+  .rule-thick {
+    border-top: 4px solid var(--ink);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 1.25rem;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--font-playfair), Georgia, serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+  }
+  .btn:hover {
+    background: var(--hover);
+  }
+  .link {
+    text-decoration: underline;
+  }
+  .link:hover {
+    color: var(--hover);
+  }
+}
