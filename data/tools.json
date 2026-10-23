@@ -191,6 +191,27 @@
     "sponsor_until": null
   },
   {
+    "slug": "recursive-flint",
+    "name": "Recursive Flint",
+    "url": "https://www.recursive.com/updates/introducing-recursive-flint",
+    "category": "coding",
+    "use_cases": [
+      "run a coding model locally",
+      "offline coding assistant",
+      "agentic coding without api fees",
+      "keep code on your own machine"
+    ],
+    "what": "Flint is an open-weight coding model from Recursive, built for agentic coding on your own hardware. It is a mixture-of-experts model with 40B total parameters, about 2.5B active per token, and runs with tools like llama.cpp, Ollama, LM Studio, vLLM and SGLang.",
+    "best_for": "Developers who want a capable coding model that runs locally and keeps code off third-party servers",
+    "pricing": "Free",
+    "verdict": "A strong option for private, offline coding, but the full weights are about 80 GB and you have to set up and run the model yourself.",
+    "added": "2026-10-22",
+    "updated": "2026-10-22",
+    "source_url": "https://www.recursive.com/updates/introducing-recursive-flint",
+    "sponsored": false,
+    "sponsor_until": null
+  },
+  {
     "slug": "replit",
     "name": "Replit",
     "url": "https://replit.com/",
@@ -208,6 +229,27 @@
     "added": "2026-10-23",
     "updated": "2026-10-23",
     "source_url": "https://replit.com/pricing",
+    "sponsored": false,
+    "sponsor_until": null
+  },
+  {
+    "slug": "theorem-oss-verify",
+    "name": "Theorem OSS Verify",
+    "url": "https://theorem.dev/oss-verify/",
+    "category": "coding",
+    "use_cases": [
+      "prove a fuzz target never crashes",
+      "formal verification for open source",
+      "find memory safety bugs",
+      "security hardening for libraries"
+    ],
+    "what": "Theorem OSS Verify uses AI-driven formal methods to prove properties of compiled open source code, such as a fuzz test never crashing on any input. Maintainers get a machine-checked proof and private reports of any bugs found along the way.",
+    "best_for": "Maintainers of widely used open source libraries that sit on a security boundary",
+    "pricing": "Free",
+    "verdict": "Offers a stronger guarantee than fuzzing alone at no cost, but projects must be accepted, builds must target static riscv64, and proofs can take days.",
+    "added": "2026-10-23",
+    "updated": "2026-10-23",
+    "source_url": "https://theorem.dev/oss-verify/",
     "sponsored": false,
     "sponsor_until": null
   },
@@ -347,15 +389,16 @@
       "social media graphics",
       "presentations",
       "marketing materials",
+      "generate images with readable text",
       "quick ai image edits"
     ],
-    "what": "A browser-based design tool with templates for social posts, slides and print. Paid plans add premium content and AI features that share a monthly AI allowance.",
+    "what": "A browser-based design tool with templates for social posts, slides and print, plus Craft, Canva's own image model, which renders legible text and converts into editable layers. Paid plans add premium content and AI features that share a monthly AI allowance.",
     "best_for": "Non-designers who need good-looking graphics fast",
     "pricing": "Freemium",
     "verdict": "The easiest way for non-designers to produce polished graphics, but its template-first approach can make work look generic, and AI use is capped by plan.",
     "added": "2026-10-23",
     "updated": "2026-10-23",
-    "source_url": "https://www.canva.com/pricing/",
+    "source_url": "https://www.canva.com/newsroom/news/canva-craft/",
     "sponsored": false,
     "sponsor_until": null
   },
@@ -377,6 +420,27 @@
     "added": "2026-10-23",
     "updated": "2026-10-23",
     "source_url": "https://www.figma.com/pricing/",
+    "sponsored": false,
+    "sponsor_until": null
+  },
+  {
+    "slug": "ideogram-vector",
+    "name": "Ideogram Vector",
+    "url": "https://ideogram.ai/models/vector/",
+    "category": "design",
+    "use_cases": [
+      "generate logos as svg",
+      "convert an image to vector",
+      "create editable illustrations",
+      "print-ready vector artwork"
+    ],
+    "what": "Ideogram Vector creates editable SVG artwork from a text prompt or turns an existing image into a vector. You can recolor, scale and edit individual shapes, in the Ideogram web app or through its API.",
+    "best_for": "Designers and small teams who need logos, icons or print graphics as clean, scalable vectors",
+    "pricing": "Unknown",
+    "verdict": "Saves the manual tracing step for logos and illustrations, but API use is billed per SVG (from $0.10 to vectorize an image) and complex artwork may still need cleanup.",
+    "added": "2026-10-23",
+    "updated": "2026-10-23",
+    "source_url": "https://ideogram.ai/models/vector/",
     "sponsored": false,
     "sponsor_until": null
   },
@@ -419,6 +483,27 @@
     "added": "2026-10-23",
     "updated": "2026-10-23",
     "source_url": "https://www.recraft.ai/pricing",
+    "sponsored": false,
+    "sponsor_until": null
+  },
+  {
+    "slug": "useit-studio",
+    "name": "UseIt Studio",
+    "url": "https://useit.im/",
+    "category": "design",
+    "use_cases": [
+      "design printable cards and stickers",
+      "edit artwork by describing changes",
+      "turn one design into a matching set",
+      "prepare print-ready files with cut lines"
+    ],
+    "what": "UseIt Studio is an AI design tool for things you print, cut or fold. You describe changes in plain language, edit text and vector layers, preview the result in 3D, and export print-ready PDF or Illustrator files with cut lines.",
+    "best_for": "Makers and small sellers designing cards, stickers, packaging or other printed items",
+    "pricing": "Unknown",
+    "verdict": "Covers the step most AI image tools skip, getting a design ready for production, but it is early software and its pricing is not published.",
+    "added": "2026-10-22",
+    "updated": "2026-10-22",
+    "source_url": "https://useit.im/",
     "sponsored": false,
     "sponsor_until": null
   },
@@ -536,16 +621,16 @@
       "turn text into natural speech",
       "clone a voice",
       "dub audio into other languages",
-      "transcribe audio to text",
-      "generate sound effects"
+      "build real-time voice agents",
+      "transcribe audio to text"
     ],
-    "what": "ElevenLabs generates lifelike speech from text and can design or clone voices. It also offers transcription, dubbing, sound effects and an API from one credit pool.",
-    "best_for": "Creators and developers who need high-quality voiceovers or a speech API",
+    "what": "ElevenLabs generates lifelike speech from text and can design or clone voices. It also offers transcription, dubbing, sound effects, an API, and Eleven Realtime speech-to-speech models for live voice agents.",
+    "best_for": "Creators who need high-quality voiceovers and developers building speech features or voice agents",
     "pricing": "Freemium",
     "verdict": "A leading choice for natural-sounding voices, but credits run out fast on long projects and higher tiers get expensive.",
     "added": "2026-10-23",
     "updated": "2026-10-23",
-    "source_url": "https://elevenlabs.io/pricing",
+    "source_url": "https://elevenlabs.io/realtime",
     "sponsored": false,
     "sponsor_until": null
   },

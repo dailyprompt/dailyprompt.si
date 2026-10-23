@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Libre_Baskerville, Playfair_Display, UnifrakturMaguntia } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { latestEdition } from "@/lib/data";
 import "./globals.css";
 
 const unifraktur = UnifrakturMaguntia({
@@ -46,8 +47,10 @@ const SECTIONS = [
   ["All tools", "/tools"],
 ] as const;
 
+// The paper's date and number come from the latest edition of The Daily
+// Prompt; the build date is the fallback.
 function paperDate() {
-  const d = process.env.BUILD_DATE;
+  const d = latestEdition?.date ?? process.env.BUILD_DATE;
   if (!d) return null;
   return new Date(d + "T12:00:00Z").toLocaleDateString("en-US", {
     weekday: "long",
@@ -74,7 +77,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         <header className="mx-auto w-full max-w-6xl px-4 pt-3 sm:px-6">
           <p className="label flex flex-wrap justify-center gap-x-3 border-b border-rule pb-2 text-center !font-normal !tracking-[0.15em] text-[0.7rem] sm:justify-between">
-            <span>Vol. I</span>
+            <span>
+              Vol. I{latestEdition && <> &middot; No. {latestEdition.edition}</>}
+            </span>
             {date && <span>{date}</span>}
             <span>dailyprompt.si</span>
           </p>

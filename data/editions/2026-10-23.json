@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-23",
+  "edition": 20,
+  "headline": "Microsoft AI out-diagnoses general doctors on hard cases in a Science study",
+  "dek": "A Microsoft system more than doubled generalist doctors' accuracy on tricky medical puzzles in a simulation, while the industry handed its agent 'skills' format to a neutral foundation and security experts warned that AI-found bugs will keep coming.",
+  "top_news": [
+    {
+      "title": "Microsoft's AI diagnoses hard cases twice as often as generalist doctors",
+      "summary": "In a Science paper published Oct. 22, Microsoft's MAI-DxO, which has several AI agents act like a panel of doctors, correctly diagnosed 83% of complex New England Journal of Medicine cases. Primary care doctors and internists working alone got 36%. The test was a simulation, the doctors were not specialists, and TechCrunch notes most of the gain comes from the underlying models rather than Microsoft's orchestration.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/",
+      "published": "2026-10-22"
+    },
+    {
+      "title": "Agent Skills and Open Responses become neutral, shared standards",
+      "summary": "The Agentic AI Foundation, part of the Linux Foundation, added four projects on Oct. 22: Anthropic's Agent Skills, OpenAI's Open Responses, Hugging Face's OpenEnv and Alibaba's OpenSandbox. Skills are folders of instructions and scripts an agent loads when needed; Open Responses is a shared way to send requests to different model providers. The foundation now hosts 10 projects, including MCP and AGENTS.md.",
+      "source": "Linux Foundation",
+      "url": "https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox",
+      "published": "2026-10-22"
+    },
+    {
+      "title": "Experts warn AI-found software bugs will cause more outages",
+      "summary": "Seven security professionals told Reuters that AI-driven bug discovery will likely bring more disruptions like this week's, when critical PHP flaws pushed governments and the BBC to take pages offline. VulnCheck says AI helped double the yearly number of discovered flaws. Some experts, including curl's lead developer, say many AI-found bugs are hard to exploit.",
+      "source": "Reuters via ThePrint",
+      "url": "https://theprint.in/world/ai-discovered-bugs-may-soon-trigger-fresh-disruptions-cyber-experts-say/3079678/",
+      "published": "2026-10-23"
+    },
+    {
+      "title": "OpenAI seeks up to $30 billion at a $1.25 trillion valuation",
+      "summary": "Sources told CNBC that OpenAI is raising up to $30 billion led by Coatue with UAE investors, at $1.25 trillion before the new money. That is below the $1.4 trillion Bloomberg reported a month ago, and terms are still being negotiated. OpenAI declined to comment.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+      "published": "2026-10-22"
+    },
+    {
+      "title": "Outside testers found gaps in OpenAI's system for watching its own agents",
+      "summary": "Staff from METR and Redwood Research spent three weeks inside OpenAI this summer stress-testing the monitor that watches internal AI agents for misbehavior. They found holes, including one that could keep hundreds of agent actions unmonitored and two settings that switched monitoring off. OpenAI says it patched the flaws affecting production; the testers say they have not checked that claim.",
+      "source": "Redwood Research",
+      "url": "https://blog.redwoodresearch.org/p/red-teaming-openais-internal-agent",
+      "published": "2026-10-22"
+    }
+  ],
+  "new_tools": [
+    {
+      "name": "Ideogram Vector 1.0",
+      "category": "Design",
+      "url": "https://ideogram.ai/models/vector/",
+      "slug": "ideogram-vector"
+    },
+    {
+      "name": "Theorem OSS Verify",
+      "category": "Coding",
+      "url": "https://theorem.dev/oss-verify/",
+      "slug": "theorem-oss-verify"
+    },
+    {
+      "name": "Canva Craft",
+      "category": "Images",
+      "url": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
+      "slug": "canva"
+    },
+    {
+      "name": "Nirva",
+      "category": "Wearables",
+      "url": "https://siliconangle.com/2026/10/22/nirva-raises-25m-to-make-ai-jewelry-with-perspective-that-listens-and-provides-insights/",
+      "slug": null
+    }
+  ]
+}
