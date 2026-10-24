@@ -6,7 +6,7 @@
   "meta_description": "Otter.ai vs Fireflies.ai, compared on official facts: free plan limits, real prices, bot and bot-free recording, languages and privacy, with our verdict.",
   "h1": "Otter.ai vs Fireflies.ai",
   "updated": "2026-10-23",
-  "summary": "Pick Otter.ai if you want a free plan that renews every month and the cheaper paid plan ($8.33 a month billed yearly). Pick Fireflies.ai if your meetings run long, you need more than Otter's six languages, or you don't want your recordings used to train AI. Both can record without a bot from their desktop apps.",
+  "summary": "Pick Otter.ai if you want a free plan that renews every month and the cheaper paid plan ($8.33 a month billed yearly). Pick Fireflies.ai if your meetings run long or you need more than Otter's six languages. Both can record without a bot from their desktop apps, and their AI-training policies differ; see below.",
   "tools": [
     "otter-ai",
     "fireflies-ai"
@@ -134,16 +134,16 @@
         }
       },
       {
-        "label": "Your data and AI training",
+        "label": "AI training policy",
         "cells": {
           "otter-ai": {
-            "text": "Trains its own models on user data after removing identifying details",
+            "text": "According to Otter.ai's policy (checked Oct 2026), it trains its own models on user data after removing identifying details",
             "source": "https://otter.ai/privacy-security",
             "checked": "2026-10-23",
             "confirmed": true
           },
           "fireflies-ai": {
-            "text": "Says customer data is never used for AI training",
+            "text": "According to Fireflies.ai's pricing page (checked Oct 2026), customer data is never used for AI training",
             "source": "https://fireflies.ai/pricing",
             "checked": "2026-10-23",
             "confirmed": true
@@ -220,7 +220,7 @@
       "heading": "Languages and privacy",
       "body": [
         "Otter.ai transcribes six languages. If your meetings happen in Portuguese, Italian or anything else outside that list, Fireflies.ai is the only one of the two that will work, though it labels most non-English languages as beta.",
-        "On data, Otter.ai says it trains its own models on user data after removing identifying details. Fireflies.ai says customer data is never used for AI training. Both offer HIPAA only on their enterprise tiers."
+        "The two describe their AI training differently. According to Otter.ai's privacy and security policy (checked Oct 2026), Otter trains its own models on user data after removing identifying details, and its third-party AI providers do not train on customer data. According to Fireflies.ai's pricing page (checked Oct 2026), customer data is never used for AI training. Read both policies against your own rules. Both offer HIPAA only on their enterprise tiers."
       ],
       "facts": [
         {
@@ -230,13 +230,13 @@
           "confirmed": true
         },
         {
-          "text": "Otter.ai trains its own models on de-identified user data",
+          "text": "According to Otter.ai's policy (checked Oct 2026): trains its own models on de-identified user data; third-party AI providers do not train on customer data",
           "source": "https://otter.ai/privacy-security",
           "checked": "2026-10-23",
           "confirmed": true
         },
         {
-          "text": "Fireflies.ai says customer data is never used for AI training",
+          "text": "According to Fireflies.ai's pricing page (checked Oct 2026): customer data is never used for AI training",
           "source": "https://fireflies.ai/pricing",
           "checked": "2026-10-23",
           "confirmed": true
@@ -260,7 +260,7 @@
     "heading": "Our verdict",
     "body": [
       "For a single person who mostly has short calls in English, Otter.ai is the better deal: its free plan renews monthly and its paid plan costs less.",
-      "For teams with long meetings, several languages or a firm no-training rule for their data, Fireflies.ai is the stronger pick, but budget for a paid plan, because its free storage runs out."
+      "For teams with long meetings or several languages, Fireflies.ai is the stronger pick, but budget for a paid plan, because its free storage runs out. If AI training matters to you, read each company's policy, linked above."
     ]
   }
 }

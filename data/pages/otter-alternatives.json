@@ -266,7 +266,7 @@
       "heading": "tl;dv: the best for long recordings and EU hosting",
       "tool": "tldv",
       "body": [
-        "tl;dv's free plan keeps unlimited recordings with a 3-hour cap per recording, though AI notes cover only 10 meetings and data is kept for up to 3 months. It can record with or without a bot, and says its data is hosted in the EU and never used to train AI. Paid plans are priced in euros."
+        "tl;dv's free plan keeps unlimited recordings with a 3-hour cap per recording, though AI notes cover only 10 meetings and data is kept for up to 3 months. It can record with or without a bot, and says its data is hosted in the EU. According to tl;dv's website (checked Oct 2026), it never uses meeting recordings to train AI. Paid plans are priced in euros."
       ],
       "facts": [
         {
@@ -278,6 +278,12 @@
         {
           "text": "Hosted and stored in the EU",
           "source": "https://tldv.io/app/pricing/",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "According to tl;dv's website (checked Oct 2026): meeting recordings are never used to train AI",
+          "source": "https://tldv.io/",
           "checked": "2026-10-23",
           "confirmed": true
         }
