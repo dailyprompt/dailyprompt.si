@@ -25,6 +25,7 @@ export interface Tool {
 export interface Category {
   slug: string;
   name: string;
+  headline: string; // "Best AI tools for ..." page and lead-story headline
   tagline: string;
   intro: string;
 }
@@ -58,7 +59,7 @@ export interface Edition {
   headline: string;
   dek: string;
   top_news: { title: string; summary: string; source: string; url: string; published?: string }[];
-  new_tools: { name: string; category: string; url: string; slug: string | null }[];
+  new_tools: { name: string; category: string; url: string; slug: string | null; update?: string }[];
   prompt_codes?: unknown;
   poll?: unknown;
 }
@@ -82,23 +83,45 @@ export function getEdition(date: string) {
 // "New this week": tools from The Daily Prompt's new_tools in the editions of
 // the 7 days up to the latest edition, limited to ones in the directory
 // (every directory entry has been checked against its official site).
+// `update` names the new feature when an existing product shipped it.
 export function newThisWeek(limit = 5) {
   if (!latestEdition) return [];
-  const cutoff = new Date(latestEdition.date + "T00:00:00Z");
-  cutoff.setUTCDate(cutoff.getUTCDate() - 6);
-  const from = cutoff.toISOString().slice(0, 10);
+  const from = addDays(latestEdition.date, -6);
   const seen = new Set<string>();
-  const out: Tool[] = [];
+  const out: { tool: Tool; update?: string }[] = [];
   for (const e of editions.filter((e) => e.date >= from)) {
     for (const nt of e.new_tools) {
-      const t = nt.slug ? getTool(nt.slug) : undefined;
-      if (t && !seen.has(t.slug)) {
-        seen.add(t.slug);
-        out.push(t);
+      const tool = nt.slug ? getTool(nt.slug) : undefined;
+      if (tool && !seen.has(tool.slug)) {
+        seen.add(tool.slug);
+        out.push({ tool, update: nt.update });
       }
     }
   }
   return out.slice(0, limit);
+}
+
+function addDays(iso: string, days: number) {
+  const d = new Date(iso + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
+// The paper's date: the latest edition, or the build date.
+export const paperDate: string | undefined = latestEdition?.date ?? process.env.BUILD_DATE;
+
+// The lead "Best AI tools for ..." story rotates weekly through the
+// categories, starting with Meetings in the week of 2026-10-19.
+const ROTATION_START = { monday: "2026-10-19", category: "meetings" };
+export function leadCategory(): Category {
+  const start = categories.findIndex((c) => c.slug === ROTATION_START.category);
+  const day = paperDate ?? ROTATION_START.monday;
+  const weeks = Math.floor(
+    (Date.parse(day + "T00:00:00Z") - Date.parse(ROTATION_START.monday + "T00:00:00Z")) /
+      (7 * 86400000),
+  );
+  const n = categories.length;
+  return categories[(((start + weeks) % n) + n) % n];
 }
 
 // Until editions supply new tools, the sidebar shows a fixed editor's pick.

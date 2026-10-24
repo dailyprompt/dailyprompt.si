@@ -2,60 +2,70 @@
   {
     "slug": "writing",
     "name": "Writing",
+    "headline": "Best AI tools for writing",
     "tagline": "Draft, edit and polish text.",
     "intro": "Tools that help you write faster and cleaner: first drafts, rewrites, grammar fixes and tone changes. Most work best as an editor beside you, not a ghostwriter."
   },
   {
     "slug": "coding",
     "name": "Coding",
+    "headline": "Best AI coding tools",
     "tagline": "Write, fix and understand code.",
     "intro": "AI pair programmers and coding agents. Some autocomplete as you type; others read your whole codebase and make changes across files. Always review what they write."
   },
   {
     "slug": "research",
     "name": "Research",
+    "headline": "Best AI tools for research",
     "tagline": "Find answers with sources.",
     "intro": "Tools that search the web or academic papers and give answers you can check. Look for ones that cite sources, then open the sources."
   },
   {
     "slug": "design",
     "name": "Design",
+    "headline": "Best AI tools for design and images",
     "tagline": "Images, layouts and visuals.",
     "intro": "Generate images, mock up interfaces and produce marketing visuals. The gap between tools is mostly control: how precisely you can get what you pictured."
   },
   {
     "slug": "video",
     "name": "Video",
+    "headline": "Best AI video tools",
     "tagline": "Generate and edit video.",
     "intro": "Tools that make clips from text or images, create talking-head presenters, or edit footage by editing a transcript. Output quality and pricing change fast here."
   },
   {
     "slug": "voice",
     "name": "Voice",
+    "headline": "Best AI voice tools",
     "tagline": "Speech to text and text to speech.",
     "intro": "Dictation apps, natural-sounding voiceovers and voice cloning. Check each tool's rules on commercial use and cloning consent before you publish anything."
   },
   {
     "slug": "agents",
     "name": "Agents",
+    "headline": "Best AI agents and automation tools",
     "tagline": "Hand off multi-step work.",
     "intro": "Agents take actions for you: browse sites, fill forms, run workflows across your apps. They save the most time on repeatable tasks and still need supervision."
   },
   {
     "slug": "productivity",
     "name": "Productivity",
+    "headline": "Best AI assistants for everyday work",
     "tagline": "Everyday assistants and work apps.",
     "intro": "General AI assistants and the AI built into notes, email and docs. Start here if you want one tool that covers a lot of ground."
   },
   {
     "slug": "data",
     "name": "Data",
+    "headline": "Best AI tools for data and spreadsheets",
     "tagline": "Spreadsheets, analysis and SQL.",
     "intro": "Tools that clean data, write formulas and queries, and turn questions into charts. Check the numbers they give you against the source before you share them."
   },
   {
     "slug": "meetings",
     "name": "Meetings",
+    "headline": "Best AI tools for meeting notes",
     "tagline": "Notes, transcripts and follow-ups.",
     "intro": "Note-takers that join or record your calls, then produce transcripts, summaries and action items. Tell people when a call is being recorded."
   }

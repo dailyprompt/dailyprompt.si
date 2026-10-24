@@ -12,18 +12,19 @@ const FIRST_PUBLIC_DATE = "2026-10-22"; // first general-audience edition
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outDir = path.join(root, "data/editions");
 const tools = JSON.parse(fs.readFileSync(path.join(root, "data/tools.json"), "utf8"));
-// Edition tool names that map to a different directory entry (e.g. a feature
-// of an existing tool). Everything else is matched by name.
+// Edition tool names that don't match a directory entry by name.
+// { "<edition name>": { "slug": "<entry>", "update"?: "<label>" } }
+// "update" marks a new feature of an existing product (shown as "New: <label>").
 const aliases = JSON.parse(fs.readFileSync(path.join(root, "data/new-tools-map.json"), "utf8"));
 
 const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
 const bySlug = new Set(tools.map((t) => t.slug));
 const byName = new Map(tools.map((t) => [norm(t.name), t.slug]));
 
-function slugFor(name) {
+function lookup(name) {
   const a = aliases[name];
-  if (a && bySlug.has(a)) return a;
-  return byName.get(norm(name)) ?? null;
+  if (a && bySlug.has(a.slug)) return { slug: a.slug, ...(a.update && { update: a.update }) };
+  return { slug: byName.get(norm(name)) ?? null };
 }
 
 const src = process.argv[2];
@@ -47,7 +48,7 @@ for (const file of fs.readdirSync(src).filter((f) => f.endsWith(".json")).sort()
       title, summary, source, url, published,
     })),
     new_tools: (e.new_tools ?? []).map(({ name, category, url }) => ({
-      name, category, url, slug: slugFor(name),
+      name, category, url, ...lookup(name),
     })),
   };
   // Reserved for later: shown on the site when the newsroom starts sending them.

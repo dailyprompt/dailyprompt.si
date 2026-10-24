@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Libre_Baskerville, Playfair_Display, UnifrakturMaguntia } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { latestEdition } from "@/lib/data";
+import { latestEdition, paperDate } from "@/lib/data";
 import "./globals.css";
 
 const unifraktur = UnifrakturMaguntia({
@@ -49,8 +49,7 @@ const SECTIONS = [
 
 // The paper's date and number come from the latest edition of The Daily
 // Prompt; the build date is the fallback.
-function paperDate() {
-  const d = latestEdition?.date ?? process.env.BUILD_DATE;
+function formatPaperDate(d: string | undefined) {
   if (!d) return null;
   return new Date(d + "T12:00:00Z").toLocaleDateString("en-US", {
     weekday: "long",
@@ -62,7 +61,7 @@ function paperDate() {
 }
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  const date = paperDate();
+  const date = formatPaperDate(paperDate);
   return (
     <html
       lang="en"

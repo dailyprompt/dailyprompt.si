@@ -15,7 +15,7 @@ export async function generateMetadata({
   const c = getCategory(slug);
   if (!c) return {};
   return {
-    title: `Best AI tools for ${c.name.toLowerCase()}`,
+    title: c.headline,
     description: `${c.tagline} ${c.intro}`,
     alternates: { canonical: `/categories/${c.slug}` },
   };
@@ -34,7 +34,7 @@ export default async function CategoryPage({ params }: PageProps<"/categories/[s
           <Link href="/#categories" className="hover:text-hover">Browse by task</Link> &middot; {c.name}
         </p>
         <h1 className="mt-3 font-display text-4xl font-bold leading-[1.1] sm:text-5xl">
-          Best AI tools for {c.name.toLowerCase()}
+          {c.headline}
         </h1>
         <p className="mt-4 text-lg italic">{c.intro}</p>
       </header>

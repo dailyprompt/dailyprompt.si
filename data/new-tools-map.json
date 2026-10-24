@@ -1,5 +1,5 @@
 {
-  "Canva Craft": "canva",
-  "ElevenLabs Eleven Realtime": "elevenlabs",
-  "Ideogram Vector 1.0": "ideogram-vector"
+  "Canva Craft": { "slug": "canva", "update": "Canva Craft" },
+  "ElevenLabs Eleven Realtime": { "slug": "elevenlabs", "update": "Eleven Realtime" },
+  "Ideogram Vector 1.0": { "slug": "ideogram-vector" }
 }
