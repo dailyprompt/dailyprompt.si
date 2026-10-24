@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Edition } from "@/lib/data";
 
 // The latest edition of The Daily Prompt in brief: the headline (the lead
-// story, top_news[0]) plus stories 2-5, each linking to the edition. Prompt codes and the poll get their
-// own slots here once editions start carrying them.
+// story, top_news[0]) plus stories 2-5, each linking to the edition. Prompt
+// codes and the poll get their own slots here once editions carry them.
 export function TodayInBrief({ edition }: { edition: Edition }) {
   const href = `/editions/${edition.date}`;
   const items = edition.top_news.slice(1, 5);

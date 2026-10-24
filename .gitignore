@@ -45,3 +45,6 @@ next-env.d.ts
 /BUILD_PLAN.md
 /CLAUDE.md
 /.claude/
+
+# iCloud conflict copies (e.g. "page 2.tsx")
+* [0-9].*
