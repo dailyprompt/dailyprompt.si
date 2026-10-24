@@ -110,7 +110,12 @@ export default async function ToolPage({ params }: PageProps<"/tools/[slug]">) {
       {others.length > 0 && c && (
         <section aria-labelledby="alt-h">
           <div className="rule-double" />
-          <h2 id="alt-h" className="label mt-3">Other {c.name.toLowerCase()} tools</h2>
+          <div className="mt-3 flex flex-wrap items-baseline justify-between gap-2">
+            <h2 id="alt-h" className="label">Other {c.name.toLowerCase()} tools</h2>
+            <Link href={`/categories/${c.slug}`} className="link text-sm italic">
+              {c.headline}, compared
+            </Link>
+          </div>
           <ul className="mt-4 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {others.map((o) => (
               <li key={o.slug}>

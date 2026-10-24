@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
-import { editions, formatDate, getEdition, getTool } from "@/lib/data";
+import { editions, formatDate, getEdition, getTool, toolsInEdition } from "@/lib/data";
 import { breadcrumbLd } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -28,6 +28,8 @@ export default async function EditionPage({ params }: PageProps<"/editions/[date
   if (!e) notFound();
   const i = editions.indexOf(e);
   const newer = editions[i - 1];
+  const newSlugs = new Set(e.new_tools.map((nt) => nt.slug));
+  const mentioned = toolsInEdition(e).filter((t) => !newSlugs.has(t.slug));
   const older = editions[i + 1];
 
   return (
@@ -71,7 +73,7 @@ export default async function EditionPage({ params }: PageProps<"/editions/[date
                 <li key={nt.name} className="py-3">
                   {t ? (
                     <Link href={`/tools/${t.slug}`} className="font-display text-lg font-bold hover:text-hover">
-                      {nt.name}
+                      {nt.update ? `${t.name}: ${nt.update}` : nt.name}
                     </Link>
                   ) : (
                     <span className="font-display text-lg font-bold">{nt.name}</span>
@@ -85,6 +87,23 @@ export default async function EditionPage({ params }: PageProps<"/editions/[date
                 </li>
               );
             })}
+          </ul>
+        </section>
+      )}
+
+      {mentioned.length > 0 && (
+        <section aria-labelledby="mentioned-h" className="mt-8">
+          <div className="rule-thick" />
+          <h2 id="mentioned-h" className="label mt-3">Also mentioned in this edition</h2>
+          <ul className="mt-2 divide-y divide-rule">
+            {mentioned.map((t) => (
+              <li key={t.slug} className="py-3">
+                <Link href={`/tools/${t.slug}`} className="font-display text-lg font-bold hover:text-hover">
+                  {t.name}
+                </Link>
+                <p className="text-sm">{t.verdict}</p>
+              </li>
+            ))}
           </ul>
         </section>
       )}
