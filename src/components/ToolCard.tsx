@@ -11,7 +11,16 @@ export function SponsoredTag() {
 
 // A short newspaper "brief". Sponsored entries get a boxed notice so they
 // never look like an editorial pick.
-export function ToolCard({ tool, showCategory }: { tool: Tool; showCategory?: string }) {
+export function ToolCard({
+  tool,
+  showCategory,
+  headingLevel = 3,
+}: {
+  tool: Tool;
+  showCategory?: string;
+  headingLevel?: 2 | 3;
+}) {
+  const H = headingLevel === 2 ? "h2" : "h3";
   return (
     <article
       className={`relative flex h-full flex-col gap-2 ${
@@ -24,11 +33,11 @@ export function ToolCard({ tool, showCategory }: { tool: Tool; showCategory?: st
           {showCategory && <span className="label text-muted">{showCategory}</span>}
         </p>
       )}
-      <h3 className="font-display text-xl font-bold leading-tight">
+      <H className="font-display text-xl font-bold leading-tight">
         <Link href={`/tools/${tool.slug}`} className="after:absolute after:inset-0 hover:text-hover">
           {tool.name}
         </Link>
-      </h3>
+      </H>
       <p className="text-[0.95rem]">{tool.verdict}</p>
       <p className="mt-auto pt-1 text-sm text-muted">
         <PricingTag pricing={tool.pricing} />

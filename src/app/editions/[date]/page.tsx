@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/JsonLd";
 import { editions, formatDate, getEdition, getTool } from "@/lib/data";
+import { breadcrumbLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return editions.map((e) => ({ date: e.date }));
@@ -14,7 +16,7 @@ export async function generateMetadata({
   const e = getEdition(date);
   if (!e) return {};
   return {
-    title: `No. ${e.edition}: ${e.headline}`,
+    title: `AI news, ${formatDate(e.date)}: No. ${e.edition}`,
     description: e.dek,
     alternates: { canonical: `/editions/${e.date}` },
   };
@@ -30,6 +32,7 @@ export default async function EditionPage({ params }: PageProps<"/editions/[date
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+      <JsonLd data={breadcrumbLd([[`No. ${e.edition}`, `/editions/${e.date}`]])} />
       <p className="label text-center">
         No. {e.edition} &middot; <time dateTime={e.date}>{formatDate(e.date)}</time>
       </p>

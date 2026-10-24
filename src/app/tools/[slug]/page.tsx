@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/JsonLd";
 import { PricingTag, SponsoredTag, ToolCard } from "@/components/ToolCard";
+import { breadcrumbLd, softwareLd } from "@/lib/seo";
 import { formatDate, getCategory, getTool, hostname, tools, toolsInCategory } from "@/lib/data";
 
 export function generateStaticParams() {
@@ -15,7 +17,7 @@ export async function generateMetadata({
   const t = getTool(slug);
   if (!t) return {};
   return {
-    title: `${t.name}: what it does, pricing and our verdict`,
+    title: `${t.name}: pricing and verdict`,
     description: `${t.what} Verdict: ${t.verdict}`,
     alternates: { canonical: `/tools/${t.slug}` },
   };
@@ -32,6 +34,15 @@ export default async function ToolPage({ params }: PageProps<"/tools/[slug]">) {
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <JsonLd
+        data={[
+          breadcrumbLd([
+            ...(c ? [[c.name, `/categories/${c.slug}`] as [string, string]] : []),
+            [t.name, `/tools/${t.slug}`],
+          ]),
+          softwareLd(t),
+        ]}
+      />
       <article className="grid gap-10 py-10 lg:grid-cols-[1fr_18rem] lg:gap-0">
         <div className="lg:border-r lg:border-rule lg:pr-8">
           <p className="label">
