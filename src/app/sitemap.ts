@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { categories, editions, paperDate, tools, toolsInCategory } from "@/lib/data";
+import { pagePath, pages } from "@/lib/pages";
 import { abs } from "@/lib/seo";
 
 // Dates come from the data, so a page's lastModified changes only when its
@@ -22,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: t.updated,
       changeFrequency: "monthly" as const,
       priority: 0.7,
+    })),
+    ...pages.map((p) => ({
+      url: abs(pagePath(p)),
+      lastModified: p.updated,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
     })),
     ...editions.map((e) => ({
       url: abs(`/editions/${e.date}`),

@@ -1,0 +1,266 @@
+{
+  "slug": "otter-vs-fireflies",
+  "type": "compare",
+  "category": "meetings",
+  "title": "Otter.ai vs Fireflies.ai: which to pick",
+  "meta_description": "Otter.ai vs Fireflies.ai, compared on official facts: free plan limits, real prices, bot and bot-free recording, languages and privacy, with our verdict.",
+  "h1": "Otter.ai vs Fireflies.ai",
+  "updated": "2026-10-23",
+  "summary": "Pick Otter.ai if you want a free plan that renews every month and the cheaper paid plan ($8.33 a month billed yearly). Pick Fireflies.ai if your meetings run long, you need more than Otter's six languages, or you don't want your recordings used to train AI. Both can record without a bot from their desktop apps.",
+  "tools": [
+    "otter-ai",
+    "fireflies-ai"
+  ],
+  "table": {
+    "caption": "Side by side",
+    "rows": [
+      {
+        "label": "Free plan",
+        "cells": {
+          "otter-ai": {
+            "text": "300 transcription minutes a month, shared with file imports",
+            "source": "https://otter.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "400 minutes of storage in total, not per month; delete old meetings to free space",
+            "source": "https://guide.fireflies.ai/articles/4777633252-learn-about-meeting-storage-limits",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      },
+      {
+        "label": "Longest free meeting",
+        "cells": {
+          "otter-ai": {
+            "text": "30 minutes per conversation; you only see the first 30 minutes of transcript",
+            "source": "https://help.otter.ai/hc/en-us/articles/360047538094-Conversation-import-and-app-limits-on-the-Basic-free-plan",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "2 hours per recording",
+            "source": "https://fireflies.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      },
+      {
+        "label": "Free history and AI",
+        "cells": {
+          "otter-ai": {
+            "text": "Only your 25 most recent conversations are visible; summaries included; 20 AI Chat questions a month",
+            "source": "https://help.otter.ai/hc/en-us/articles/360047538094-Conversation-import-and-app-limits-on-the-Basic-free-plan",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "\"Limited\" AI summaries (no number published) and 20 AI credits",
+            "source": "https://fireflies.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      },
+      {
+        "label": "Pro",
+        "cells": {
+          "otter-ai": {
+            "text": "$16.99 a month, or $8.33 a month billed yearly (per user)",
+            "source": "https://otter.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "$18 a month, or $10 a month billed yearly (per seat)",
+            "source": "https://fireflies.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      },
+      {
+        "label": "Business",
+        "cells": {
+          "otter-ai": {
+            "text": "$30 a month, or $19.99 a month billed yearly (per user)",
+            "source": "https://otter.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "$29 a month, or $19 a month billed yearly (per seat)",
+            "source": "https://fireflies.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      },
+      {
+        "label": "How it records",
+        "cells": {
+          "otter-ai": {
+            "text": "A bot joins Zoom, Meet and Teams; the Mac and Windows desktop app records device audio with no bot",
+            "source": "https://help.otter.ai/hc/en-us/articles/35973988280215-Otter-Desktop-App-Mac-Windows",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "A visible bot joins Zoom, Meet and Teams; the Mac and Windows desktop app records with no bot, keeping only the transcript and summary",
+            "source": "https://guide.fireflies.ai/articles/6666374717-how-to-record-meetings-without-a-bot-on-the-fireflies-desktop-app",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      },
+      {
+        "label": "Languages",
+        "cells": {
+          "otter-ai": {
+            "text": "6: English, Spanish, French, German, Japanese, Chinese (Simplified)",
+            "source": "https://help.otter.ai/hc/en-us/articles/360047247414-Supported-languages",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "100+; English is primary and most others are in beta",
+            "source": "https://guide.fireflies.ai/articles/2973706448-learn-about-fireflies-supported-languages",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      },
+      {
+        "label": "Your data and AI training",
+        "cells": {
+          "otter-ai": {
+            "text": "Trains its own models on user data after removing identifying details",
+            "source": "https://otter.ai/privacy-security",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "Says customer data is never used for AI training",
+            "source": "https://fireflies.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      }
+    ]
+  },
+  "sections": [
+    {
+      "heading": "Free plans: which goes further",
+      "body": [
+        "Otter.ai's free plan renews every month, but it is built for short calls: each conversation shows only its first 30 minutes of transcript, and only your 25 most recent conversations stay visible. Upgrade and the archived ones come back.",
+        "Fireflies.ai's free plan handles longer meetings (up to 2 hours), but its 400 minutes are a storage cap, not a monthly allowance. Once you hit it, you have to delete old meetings to open new ones. That makes it a good trial and a poor long-term free option."
+      ],
+      "facts": [
+        {
+          "text": "Otter.ai Basic: 300 minutes a month, 30 minutes per conversation, 25 most recent conversations visible",
+          "source": "https://help.otter.ai/hc/en-us/articles/360047538094-Conversation-import-and-app-limits-on-the-Basic-free-plan",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Fireflies.ai Free: 400 minutes of storage per team, 2-hour recording limit, 20 AI credits",
+          "source": "https://fireflies.ai/pricing",
+          "checked": "2026-10-23",
+          "confirmed": true
+        }
+      ]
+    },
+    {
+      "heading": "Recording with or without a bot",
+      "body": [
+        "By default, both send a notetaker bot into Zoom, Google Meet and Microsoft Teams calls, and other people in the call can see it. Both also offer a Mac and Windows desktop app that records from your computer's audio instead, with no bot in the call.",
+        "Fireflies.ai's bot-free desktop mode keeps only the transcript and summary, not an audio or video file. Its Chrome extension can also record Google Meet without the bot."
+      ],
+      "facts": [
+        {
+          "text": "Otter.ai desktop app records without a bot on Mac and Windows",
+          "source": "https://help.otter.ai/hc/en-us/articles/35973988280215-Otter-Desktop-App-Mac-Windows",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Fireflies.ai desktop app records without a bot; transcript and summary only",
+          "source": "https://guide.fireflies.ai/articles/6666374717-how-to-record-meetings-without-a-bot-on-the-fireflies-desktop-app",
+          "checked": "2026-10-23",
+          "confirmed": true
+        }
+      ]
+    },
+    {
+      "heading": "What you pay",
+      "body": [
+        "For one paying user, Otter.ai is cheaper: Pro is $8.33 a month billed yearly against Fireflies.ai's $10, and $16.99 against $18 month to month. Otter's Pro adds 1,200 minutes a month and meetings up to 90 minutes; Fireflies.ai's Pro removes the transcription and summary limits but keeps a 2-hour recording cap.",
+        "At the Business level the two cost about the same. Fireflies.ai's Enterprise plan is $39 per seat, billed yearly only; Otter.ai doesn't publish an Enterprise price."
+      ],
+      "facts": [
+        {
+          "text": "Otter.ai Pro: 1,200 minutes a month per user, up to 90 minutes per meeting",
+          "source": "https://otter.ai/pricing",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Fireflies.ai Pro: unlimited transcription and summaries, 8,000 minutes of storage per seat, 2-hour recording limit",
+          "source": "https://fireflies.ai/pricing",
+          "checked": "2026-10-23",
+          "confirmed": true
+        }
+      ]
+    },
+    {
+      "heading": "Languages and privacy",
+      "body": [
+        "Otter.ai transcribes six languages. If your meetings happen in Portuguese, Italian or anything else outside that list, Fireflies.ai is the only one of the two that will work, though it labels most non-English languages as beta.",
+        "On data, Otter.ai says it trains its own models on user data after removing identifying details. Fireflies.ai says customer data is never used for AI training. Both offer HIPAA only on their enterprise tiers."
+      ],
+      "facts": [
+        {
+          "text": "Otter.ai supports 6 transcription languages",
+          "source": "https://help.otter.ai/hc/en-us/articles/360047247414-Supported-languages",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Otter.ai trains its own models on de-identified user data",
+          "source": "https://otter.ai/privacy-security",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Fireflies.ai says customer data is never used for AI training",
+          "source": "https://fireflies.ai/pricing",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Otter.ai: HIPAA is an Enterprise add-on",
+          "source": "https://otter.ai/pricing",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Fireflies.ai: HIPAA compliance on Enterprise",
+          "source": "https://fireflies.ai/pricing",
+          "checked": "2026-10-23",
+          "confirmed": true
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "heading": "Our verdict",
+    "body": [
+      "For a single person who mostly has short calls in English, Otter.ai is the better deal: its free plan renews monthly and its paid plan costs less.",
+      "For teams with long meetings, several languages or a firm no-training rule for their data, Fireflies.ai is the stronger pick, but budget for a paid plan, because its free storage runs out."
+    ]
+  }
+}
