@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { PricingTag, SponsoredTag, ToolCard } from "@/components/ToolCard";
+import { pagePath, pagesForTool } from "@/lib/pages";
 import { breadcrumbLd, softwareLd } from "@/lib/seo";
 import { formatDate, getCategory, getTool, hostname, tools, toolsInCategory } from "@/lib/data";
 
@@ -70,6 +71,19 @@ export default async function ToolPage({ params }: PageProps<"/tools/[slug]">) {
             <h2 id="verdict-h" className="label mt-3">Our verdict</h2>
             <p className="mt-2 font-display text-2xl leading-snug">{t.verdict}</p>
           </section>
+
+          {pagesForTool(t.slug).length > 0 && (
+            <section aria-labelledby="cmp-h" className="mt-8 border-t border-rule pt-3">
+              <h2 id="cmp-h" className="label">Compare</h2>
+              <ul className="mt-2">
+                {pagesForTool(t.slug).map((p) => (
+                  <li key={p.slug}>
+                    <Link href={pagePath(p)} className="link">{p.h1}</Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <section aria-labelledby="uses-h" className="mt-8 border-t border-rule pt-3">
             <h2 id="uses-h" className="label">Use it for</h2>

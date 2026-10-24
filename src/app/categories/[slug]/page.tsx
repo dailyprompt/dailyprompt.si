@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { PricingTag, SponsoredTag } from "@/components/ToolCard";
 import { categories, formatDate, getCategory, hostname, lastUpdated, toolsInCategory } from "@/lib/data";
+import { FactCell } from "@/components/FactCell";
+import { categoryExtras, pagePath, pagesForCategory } from "@/lib/pages";
 import { breadcrumbLd, itemListLd } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -32,6 +34,8 @@ export default async function CategoryPage({ params }: PageProps<"/categories/[s
   if (!c) notFound();
   const list = toolsInCategory(slug);
   const updated = lastUpdated(slug);
+  const extras = categoryExtras(slug);
+  const related = pagesForCategory(slug);
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6">
@@ -83,6 +87,56 @@ export default async function CategoryPage({ params }: PageProps<"/categories/[s
         </div>
       </section>
 
+      {extras?.table && (
+        <section aria-labelledby="xt-h" className="mt-10">
+          <div className="rule-double" />
+          <h2 id="xt-h" className="label mt-3">{extras.table.caption}</h2>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full min-w-[34rem] border-collapse text-left text-sm">
+              <thead>
+                <tr className="border-b-2 border-ink">
+                  <th scope="col" className="label py-2 pr-4">Tool</th>
+                  {extras.table.rows.map((r) => (
+                    <th key={r.label} scope="col" className="label py-2 pr-4">{r.label}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {extras.table.tools.map((s) => (
+                  <tr key={s} className="border-b border-rule align-top">
+                    <th scope="row" className="py-2 pr-4 font-bold">
+                      <a href={`#${s}`} className="hover:text-hover">{list.find((t) => t.slug === s)?.name ?? s}</a>
+                    </th>
+                    {extras.table!.rows.map((r) => (
+                      <td key={r.label} className="py-2 pr-4">
+                        {r.cells[s] ? <FactCell fact={r.cells[s]} /> : <span className="text-muted">&ndash;</span>}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      {extras?.sections?.map((s, i) => (
+        <section key={i} aria-labelledby={`xs${i}-h`} className="mt-10">
+          <div className="rule-double" />
+          <h2 id={`xs${i}-h`} className="mt-4 font-display text-2xl font-bold">{s.heading}</h2>
+          {s.body.map((p, j) => (
+            <p key={j} className="mt-3 leading-relaxed">{p}</p>
+          ))}
+          {s.facts && (
+            <ul className="mt-3 list-disc pl-5 text-sm">
+              {s.facts.map((f, j) => (
+                <li key={j} className="mt-1"><FactCell fact={f} /></li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))}
+
       <section aria-labelledby="verdicts-h" className="mt-10">
         <div className="rule-double" />
         <h2 id="verdicts-h" className="label mt-3">Our verdicts</h2>
@@ -128,6 +182,21 @@ export default async function CategoryPage({ params }: PageProps<"/categories/[s
           ))}
         </div>
       </section>
+
+      {related.length > 0 && (
+        <section aria-labelledby="related-h" className="mt-6">
+          <div className="rule-thick" />
+          <h2 id="related-h" className="label mt-3">Compare head to head</h2>
+          <ul className="mt-2 divide-y divide-rule">
+            {related.map((p) => (
+              <li key={p.slug} className="py-2">
+                <Link href={pagePath(p)} className="font-display text-lg font-bold hover:text-hover">{p.h1}</Link>
+                <p className="text-sm">{p.summary}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <p className="mt-6 border-t border-rule pt-4 text-sm italic text-muted">
         Listed alphabetically. Sponsored notices, when there are any, sit at the

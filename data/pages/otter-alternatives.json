@@ -1,0 +1,321 @@
+{
+  "slug": "otter",
+  "type": "alternatives",
+  "category": "meetings",
+  "title": "Otter.ai alternatives, free and paid",
+  "meta_description": "Looking for an Otter.ai alternative? We compare Fathom, Fireflies.ai, Granola and tl;dv on free plans, prices and bot-free recording, from official pages.",
+  "h1": "The best Otter.ai alternatives",
+  "updated": "2026-10-23",
+  "summary": "The best free Otter.ai alternative is Fathom, whose free plan includes unlimited recordings and transcripts. Choose Granola if you never want a bot in your calls, Fireflies.ai if you need more than Otter's six languages, and tl;dv for recordings up to 3 hours on its free plan and EU data hosting.",
+  "tools": [
+    "otter-ai",
+    "fathom",
+    "granola",
+    "fireflies-ai",
+    "tldv"
+  ],
+  "table": {
+    "caption": "Free plans side by side",
+    "rows": [
+      {
+        "label": "Free plan",
+        "cells": {
+          "otter-ai": {
+            "text": "300 minutes a month; 30 minutes per conversation",
+            "source": "https://otter.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fathom": {
+            "text": "Unlimited recordings and transcripts; advanced AI summaries on your first 5 calls a month",
+            "source": "https://help.fathom.video/en/articles/5290881",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "granola": {
+            "text": "30 days of meeting history; older notes locked until you upgrade",
+            "source": "https://www.granola.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "400 minutes of storage in total; 2-hour recordings",
+            "source": "https://fireflies.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "tldv": {
+            "text": "Unlimited recordings; AI notes on 10 meetings; data kept up to 3 months; 3-hour recordings",
+            "source": "https://tldv.io/app/pricing/",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      },
+      {
+        "label": "Records without a bot",
+        "cells": {
+          "otter-ai": {
+            "text": "Yes, with the Mac and Windows desktop app",
+            "source": "https://help.otter.ai/hc/en-us/articles/35973988280215-Otter-Desktop-App-Mac-Windows",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fathom": {
+            "text": "Mac only, in beta; Windows is a limited alpha for Teams",
+            "source": "https://help.fathom.video/en/articles/11577345-how-does-bot-free-recording-work-in-fathom-3-0",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "granola": {
+            "text": "Always: it never uses a bot",
+            "source": "https://www.granola.ai/",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "Yes, with the desktop app (transcript and summary only)",
+            "source": "https://guide.fireflies.ai/articles/6666374717-how-to-record-meetings-without-a-bot-on-the-fireflies-desktop-app",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "tldv": {
+            "text": "Yes, with the Mac and Windows desktop app",
+            "source": "https://intercom.help/tldv/en/articles/14433922-record-meetings-on-any-platform-with-or-without-a-bot-tl-dv-desktop-app",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      },
+      {
+        "label": "Cheapest paid plan",
+        "cells": {
+          "otter-ai": {
+            "text": "Pro: $16.99 a month, or $8.33 billed yearly",
+            "source": "https://otter.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fathom": {
+            "text": "Premium: $20 a month, or $16 billed yearly",
+            "source": "https://www.fathom.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "granola": {
+            "text": "Business: $14 per user a month; billing period not stated",
+            "source": "https://www.granola.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "Pro: $18 a month, or $10 billed yearly",
+            "source": "https://fireflies.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "tldv": {
+            "text": "Pro: €29 a month, or €18 billed yearly (euros)",
+            "source": "https://tldv.io/app/pricing/",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      },
+      {
+        "label": "Languages",
+        "cells": {
+          "otter-ai": {
+            "text": "6",
+            "source": "https://help.otter.ai/hc/en-us/articles/360047247414-Supported-languages",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fathom": {
+            "text": "38",
+            "source": "https://help.fathom.video/en/articles/296192",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "granola": {
+            "text": "31 on desktop, 17 on mobile",
+            "source": "https://docs.granola.ai/help-center/customising-granola/multi-language",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "100+ (most in beta)",
+            "source": "https://guide.fireflies.ai/articles/2973706448-learn-about-fireflies-supported-languages",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "tldv": {
+            "text": "30+",
+            "source": "https://tldv.io/app/pricing/",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      }
+    ]
+  },
+  "sections": [
+    {
+      "heading": "Why people look for an Otter.ai alternative",
+      "body": [
+        "Otter.ai is easy to start with, but its free plan is tight for real work: each conversation shows only its first 30 minutes of transcript, only your 25 most recent conversations stay visible, and file imports are capped at 3 for the life of the account. It also transcribes just six languages.",
+        "If those limits don't bite, Otter.ai is still good value (see the end of this page). If they do, these four are the alternatives worth trying."
+      ],
+      "facts": [
+        {
+          "text": "Otter.ai Basic: 30 minutes per conversation, 25 most recent conversations visible, 3 lifetime imports",
+          "source": "https://help.otter.ai/hc/en-us/articles/360047538094-Conversation-import-and-app-limits-on-the-Basic-free-plan",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Otter.ai supports 6 transcription languages",
+          "source": "https://help.otter.ai/hc/en-us/articles/360047247414-Supported-languages",
+          "checked": "2026-10-23",
+          "confirmed": true
+        }
+      ]
+    },
+    {
+      "heading": "Fathom: the best free alternative",
+      "tool": "fathom",
+      "body": [
+        "Fathom's free plan records and transcribes unlimited meetings, which is rare. The catch is the AI: advanced summaries cover only your first 5 calls each month, after which you get a simpler summary template. By default a bot joins Zoom, Meet and Teams; bot-free recording exists but is Mac only and in beta."
+      ],
+      "facts": [
+        {
+          "text": "Unlimited recordings and transcriptions on the free plan",
+          "source": "https://www.fathom.ai/pricing",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Advanced AI summaries for the first 5 calls a month",
+          "source": "https://help.fathom.video/en/articles/5290881",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Bot-free capture: Mac only; Windows limited alpha for Teams",
+          "source": "https://help.fathom.video/en/articles/11577345-how-does-bot-free-recording-work-in-fathom-3-0",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "38 transcription languages",
+          "source": "https://help.fathom.video/en/articles/296192",
+          "checked": "2026-10-23",
+          "confirmed": true
+        }
+      ]
+    },
+    {
+      "heading": "Granola: the best if you don't want a bot",
+      "tool": "granola",
+      "body": [
+        "Granola never sends a bot. It listens through your computer's or phone's audio, then turns your own rough notes into full meeting notes. It runs on Mac, Windows, iPhone and Android. The free plan keeps 30 days of meeting history; older notes stay stored but locked until you upgrade."
+      ],
+      "facts": [
+        {
+          "text": "No bot; captures device audio on all plans",
+          "source": "https://www.granola.ai/",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Free plan: 30 days of meeting history",
+          "source": "https://www.granola.ai/pricing",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "31 languages on desktop, 17 on mobile",
+          "source": "https://docs.granola.ai/help-center/customising-granola/multi-language",
+          "checked": "2026-10-23",
+          "confirmed": true
+        }
+      ]
+    },
+    {
+      "heading": "Fireflies.ai: the best for languages and team archives",
+      "tool": "fireflies-ai",
+      "body": [
+        "Fireflies.ai transcribes 100+ languages (English is primary; most others are labeled beta) and builds a searchable library of every meeting. Its free plan is a trial more than a home: 400 minutes of storage in total. Its paid Pro plan costs slightly more than Otter's."
+      ],
+      "facts": [
+        {
+          "text": "100+ languages, English primary, others in beta",
+          "source": "https://guide.fireflies.ai/articles/2973706448-learn-about-fireflies-supported-languages",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Free: 400 minutes of storage per team",
+          "source": "https://fireflies.ai/pricing",
+          "checked": "2026-10-23",
+          "confirmed": true
+        }
+      ]
+    },
+    {
+      "heading": "tl;dv: the best for long recordings and EU hosting",
+      "tool": "tldv",
+      "body": [
+        "tl;dv's free plan keeps unlimited recordings with a 3-hour cap per recording, though AI notes cover only 10 meetings and data is kept for up to 3 months. It can record with or without a bot, and says its data is hosted in the EU. According to tl;dv's website (checked Oct 2026), it never uses meeting recordings to train AI. Paid plans are priced in euros."
+      ],
+      "facts": [
+        {
+          "text": "Free: unlimited recordings, AI notes on 10 meetings, up to 3 months of data, 3-hour recordings",
+          "source": "https://tldv.io/app/pricing/",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Hosted and stored in the EU",
+          "source": "https://tldv.io/app/pricing/",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "According to tl;dv's website (checked Oct 2026): meeting recordings are never used to train AI",
+          "source": "https://tldv.io/",
+          "checked": "2026-10-23",
+          "confirmed": true
+        }
+      ]
+    },
+    {
+      "heading": "When Otter.ai is still the right choice",
+      "tool": "otter-ai",
+      "body": [
+        "Stay with Otter.ai if your calls are short and in one of its six languages. Billed yearly, its Pro plan is the cheapest paid plan on this page at $8.33 a month, its desktop app records without a bot, and every plan, including free, gets meeting summaries with action items."
+      ],
+      "facts": [
+        {
+          "text": "Pro: $8.33 a month billed yearly",
+          "source": "https://otter.ai/pricing",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Summaries with action items on every plan",
+          "source": "https://otter.ai/pricing",
+          "checked": "2026-10-23",
+          "confirmed": true
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "heading": "Our verdict",
+    "body": [
+      "Most people leaving Otter.ai's free plan should try Fathom first: unlimited recordings and transcripts cost nothing.",
+      "If the bot is the problem, use Granola. If languages are the problem, use Fireflies.ai. And if your calls are short and in English, Otter.ai's paid plan is still the cheapest way to fix its free-plan limits."
+    ]
+  }
+}

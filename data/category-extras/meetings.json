@@ -1,0 +1,160 @@
+{
+  "table": {
+    "caption": "Free plans compared",
+    "tools": [
+      "fathom",
+      "fireflies-ai",
+      "granola",
+      "otter-ai",
+      "tldv"
+    ],
+    "rows": [
+      {
+        "label": "Free plan",
+        "cells": {
+          "otter-ai": {
+            "text": "300 minutes a month; 30 minutes per conversation",
+            "source": "https://otter.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fathom": {
+            "text": "Unlimited recordings and transcripts; advanced AI summaries on your first 5 calls a month",
+            "source": "https://help.fathom.video/en/articles/5290881",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "granola": {
+            "text": "30 days of meeting history; older notes locked until you upgrade",
+            "source": "https://www.granola.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "400 minutes of storage in total; 2-hour recordings",
+            "source": "https://fireflies.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "tldv": {
+            "text": "Unlimited recordings; AI notes on 10 meetings; data kept up to 3 months; 3-hour recordings",
+            "source": "https://tldv.io/app/pricing/",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      },
+      {
+        "label": "Records without a bot",
+        "cells": {
+          "otter-ai": {
+            "text": "Yes, with the Mac and Windows desktop app",
+            "source": "https://help.otter.ai/hc/en-us/articles/35973988280215-Otter-Desktop-App-Mac-Windows",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fathom": {
+            "text": "Mac only, in beta; Windows is a limited alpha for Teams",
+            "source": "https://help.fathom.video/en/articles/11577345-how-does-bot-free-recording-work-in-fathom-3-0",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "granola": {
+            "text": "Always: it never uses a bot",
+            "source": "https://www.granola.ai/",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "Yes, with the desktop app (transcript and summary only)",
+            "source": "https://guide.fireflies.ai/articles/6666374717-how-to-record-meetings-without-a-bot-on-the-fireflies-desktop-app",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "tldv": {
+            "text": "Yes, with the Mac and Windows desktop app",
+            "source": "https://intercom.help/tldv/en/articles/14433922-record-meetings-on-any-platform-with-or-without-a-bot-tl-dv-desktop-app",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      },
+      {
+        "label": "Cheapest paid plan",
+        "cells": {
+          "otter-ai": {
+            "text": "Pro: $16.99 a month, or $8.33 billed yearly",
+            "source": "https://otter.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fathom": {
+            "text": "Premium: $20 a month, or $16 billed yearly",
+            "source": "https://www.fathom.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "granola": {
+            "text": "Business: $14 per user a month; billing period not stated",
+            "source": "https://www.granola.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "fireflies-ai": {
+            "text": "Pro: $18 a month, or $10 billed yearly",
+            "source": "https://fireflies.ai/pricing",
+            "checked": "2026-10-23",
+            "confirmed": true
+          },
+          "tldv": {
+            "text": "Pro: €29 a month, or €18 billed yearly (euros)",
+            "source": "https://tldv.io/app/pricing/",
+            "checked": "2026-10-23",
+            "confirmed": true
+          }
+        }
+      }
+    ]
+  },
+  "sections": [
+    {
+      "heading": "Bot or no bot?",
+      "body": [
+        "Most AI note takers send a bot into your Zoom, Google Meet or Teams call, and everyone in the call sees it join.",
+        "Granola never uses a bot: it records your computer's or phone's audio. Otter.ai, Fireflies.ai and tl;dv default to a bot but also offer Mac and Windows desktop apps that record without one. Fathom's bot-free mode is Mac only and still in beta. Whichever you use, tell people when a call is being recorded."
+      ],
+      "facts": [
+        {
+          "text": "Granola: no bot, device audio on all plans",
+          "source": "https://www.granola.ai/",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Otter.ai: desktop app records without a bot",
+          "source": "https://help.otter.ai/hc/en-us/articles/35973988280215-Otter-Desktop-App-Mac-Windows",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Fireflies.ai: desktop app records without a bot",
+          "source": "https://guide.fireflies.ai/articles/6666374717-how-to-record-meetings-without-a-bot-on-the-fireflies-desktop-app",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "tl;dv: desktop app records with or without a bot",
+          "source": "https://intercom.help/tldv/en/articles/14433922-record-meetings-on-any-platform-with-or-without-a-bot-tl-dv-desktop-app",
+          "checked": "2026-10-23",
+          "confirmed": true
+        },
+        {
+          "text": "Fathom: bot-free capture is Mac only and in beta",
+          "source": "https://help.fathom.video/en/articles/11577345-how-does-bot-free-recording-work-in-fathom-3-0",
+          "checked": "2026-10-23",
+          "confirmed": true
+        }
+      ]
+    }
+  ]
+}

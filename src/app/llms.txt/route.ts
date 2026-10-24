@@ -1,4 +1,5 @@
 import { categories, latestEdition, tools, toolsInCategory } from "@/lib/data";
+import { pagePath, pages } from "@/lib/pages";
 import { abs } from "@/lib/seo";
 
 // llms.txt (llmstxt.org): a plain summary of the site and its key pages for
@@ -16,6 +17,9 @@ export function GET() {
       (c) => `- [${c.headline}](${abs(`/categories/${c.slug}`)}): ${c.tagline} ${toolsInCategory(c.slug).length} tools.`,
     ),
     "",
+    ...(pages.length
+      ? ["## Comparisons", ...pages.map((p) => `- [${p.h1}](${abs(pagePath(p))}): ${p.summary}`), ""]
+      : []),
     "## Tools",
     ...categories.flatMap((c) =>
       toolsInCategory(c.slug).map(
