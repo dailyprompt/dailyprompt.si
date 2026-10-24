@@ -7,6 +7,7 @@ import {
   featuredTools,
   getCategory,
   latestEdition,
+  leadCategory,
   newThisWeek,
   tools,
   toolsInCategory,
@@ -26,16 +27,14 @@ const searchItems: SearchItem[] = tools.map((t) => {
   };
 });
 
-// The lead story is a "Best AI tools for ..." comparison.
-const LEAD = { category: "meetings", headline: "Best AI tools for meeting notes" };
-
 export default function Home() {
-  const lead = getCategory(LEAD.category)!;
-  const leadTools = toolsInCategory(LEAD.category);
+  // The lead story is a "Best AI tools for ..." comparison, rotated weekly.
+  const lead = leadCategory();
+  const leadTools = toolsInCategory(lead.slug);
   // "New this week" comes from The Daily Prompt's new_tools. With none this
   // week, the sidebar falls back to an editor's pick, labeled as such.
   const fresh = newThisWeek(5);
-  const sidebar = fresh.length ? fresh : featuredTools();
+  const sidebar = fresh.length ? fresh : featuredTools().map((tool) => ({ tool, update: undefined }));
   const sidebarTitle = fresh.length ? "New this week" : "Featured tools";
 
   return (
@@ -59,7 +58,7 @@ export default function Home() {
           <p className="label mt-3">The lead &middot; {lead.name}</p>
           <h1 className="mt-2 font-display text-4xl font-bold leading-[1.1] sm:text-5xl">
             <Link href={`/categories/${lead.slug}`} className="hover:text-hover">
-              {LEAD.headline}
+              {lead.headline}
             </Link>
           </h1>
           <p className="mt-3 text-lg italic">{lead.intro}</p>
@@ -89,7 +88,7 @@ export default function Home() {
           <div className="rule-thick" />
           <h2 className="label mt-3">{sidebarTitle}</h2>
           <ul className="mt-3 divide-y divide-rule">
-            {sidebar.map((t) => (
+            {sidebar.map(({ tool: t, update }) => (
               <li key={t.slug} className="py-3">
                 <p className="label text-muted">{getCategory(t.category)?.name}</p>
                 <h3 className="font-display text-lg font-bold leading-tight">
@@ -97,6 +96,7 @@ export default function Home() {
                     {t.name}
                   </Link>
                 </h3>
+                {update && <p className="text-sm font-bold italic">New: {update}</p>}
                 <p className="mt-1 text-sm">{t.verdict}</p>
               </li>
             ))}

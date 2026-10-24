@@ -51,7 +51,8 @@
       "name": "ElevenLabs Eleven Realtime",
       "category": "Voice",
       "url": "https://the-decoder.com/elevenlabs-releases-two-new-speech-to-speech-models-designed-for-real-time-ai-conversations/",
-      "slug": "elevenlabs"
+      "slug": "elevenlabs",
+      "update": "Eleven Realtime"
     },
     {
       "name": "UseIt Studio",
