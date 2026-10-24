@@ -4,69 +4,89 @@
     "name": "Writing",
     "headline": "Best AI tools for writing",
     "tagline": "Draft, edit and polish text.",
-    "intro": "Tools that help you write faster and cleaner: first drafts, rewrites, grammar fixes and tone changes. Most work best as an editor beside you, not a ghostwriter."
+    "intro": "Tools that help you write faster and cleaner: first drafts, rewrites, grammar fixes and tone changes. Most work best as an editor beside you, not a ghostwriter.",
+    "summary": "For everyday writing at work, Grammarly is the safest pick: it checks and polishes text in the apps you already use. Choose Hemingway Editor to make prose plainer, Sudowrite for fiction, and Jasper only if a marketing team needs on-brand copy at volume.",
+    "meta_description": "The best AI writing tools, compared: Grammarly, Hemingway Editor, Jasper, Sudowrite and Wordtune. Who each one suits, real prices and an honest verdict."
   },
   {
     "slug": "coding",
     "name": "Coding",
     "headline": "Best AI coding tools",
     "tagline": "Write, fix and understand code.",
-    "intro": "AI pair programmers and coding agents. Some autocomplete as you type; others read your whole codebase and make changes across files. Always review what they write."
+    "intro": "AI pair programmers and coding agents. Some autocomplete as you type; others read your whole codebase and make changes across files. Always review what they write.",
+    "summary": "For most developers, GitHub Copilot is the easiest place to start, and Claude Code is the strongest pick for multi-file changes run by an agent. Choose Cursor for an AI-first editor, Replit to build a working prototype without setup, and Recursive Flint to keep code on your own hardware.",
+    "meta_description": "The best AI coding tools, compared: GitHub Copilot, Claude Code, Cursor, Codex, Replit and more. Who each suits, real prices and an honest verdict on each."
   },
   {
     "slug": "research",
     "name": "Research",
     "headline": "Best AI tools for research",
     "tagline": "Find answers with sources.",
-    "intro": "Tools that search the web or academic papers and give answers you can check. Look for ones that cite sources, then open the sources."
+    "intro": "Tools that search the web or academic papers and give answers you can check. Look for ones that cite sources, then open the sources.",
+    "summary": "For quick, cited answers from the web, Perplexity is the fastest start; always open the sources. For academic work, use Elicit for literature reviews, Consensus to see what studies say on one question, and Semantic Scholar for free paper search. Use Gemini Notebook when answers must come only from your own documents.",
+    "meta_description": "The best AI research tools, compared: Perplexity, Elicit, Consensus, Semantic Scholar and Gemini Notebook. Who each suits, real prices and an honest verdict."
   },
   {
     "slug": "design",
     "name": "Design",
     "headline": "Best AI tools for design and images",
     "tagline": "Images, layouts and visuals.",
-    "intro": "Generate images, mock up interfaces and produce marketing visuals. The gap between tools is mostly control: how precisely you can get what you pictured."
+    "intro": "Generate images, mock up interfaces and produce marketing visuals. The gap between tools is mostly control: how precisely you can get what you pictured.",
+    "summary": "Canva is the best pick for non-designers who need good-looking graphics fast. Midjourney leads on image style and quality but has no free tier. Choose Adobe Firefly if you already work in Adobe apps, Figma Make for prototypes in Figma, and Recraft or Ideogram Vector when you need real vector files.",
+    "meta_description": "The best AI design and image tools, compared: Canva, Midjourney, Adobe Firefly, Figma Make, Recraft and more. Who each suits, prices and an honest verdict."
   },
   {
     "slug": "video",
     "name": "Video",
     "headline": "Best AI video tools",
     "tagline": "Generate and edit video.",
-    "intro": "Tools that make clips from text or images, create talking-head presenters, or edit footage by editing a transcript. Output quality and pricing change fast here."
+    "intro": "Tools that make clips from text or images, create talking-head presenters, or edit footage by editing a transcript. Output quality and pricing change fast here.",
+    "summary": "Runway is the strongest all-round pick for generating short video clips, though real use needs a paid plan. Choose Descript to edit talking-head video and podcasts by editing the transcript, and Synthesia or HeyGen for presenter-style videos without a camera.",
+    "meta_description": "The best AI video tools, compared: Runway, Descript, Synthesia, HeyGen and Pika. Who each one suits, what the free plans really include, and an honest verdict."
   },
   {
     "slug": "voice",
     "name": "Voice",
     "headline": "Best AI voice tools",
     "tagline": "Speech to text and text to speech.",
-    "intro": "Dictation apps, natural-sounding voiceovers and voice cloning. Check each tool's rules on commercial use and cloning consent before you publish anything."
+    "intro": "Dictation apps, natural-sounding voiceovers and voice cloning. Check each tool's rules on commercial use and cloning consent before you publish anything.",
+    "summary": "ElevenLabs is the best pick for natural-sounding voiceovers and voice cloning. For dictation, Wispr Flow is the quickest way to type by talking, and Superwhisper works offline. Choose Murf AI for training narration and Speechify if you want to listen to what you read.",
+    "meta_description": "The best AI voice tools, compared: ElevenLabs, Wispr Flow, Superwhisper, Murf AI and Speechify, for voiceovers, dictation and text to speech. Honest verdicts."
   },
   {
     "slug": "agents",
     "name": "Agents",
     "headline": "Best AI agents and automation tools",
     "tagline": "Hand off multi-step work.",
-    "intro": "Agents take actions for you: browse sites, fill forms, run workflows across your apps. They save the most time on repeatable tasks and still need supervision."
+    "intro": "Agents take actions for you: browse sites, fill forms, run workflows across your apps. They save the most time on repeatable tasks and still need supervision.",
+    "summary": "Zapier is the easiest way for non-technical teams to automate work across apps, with the widest app coverage. Choose Make for complex, branching workflows, n8n if you want to self-host and control costs, Lindy for an assistant that handles everyday admin, and Comet to hand web chores to an agent in your browser.",
+    "meta_description": "The best AI agents and automation tools, compared: Zapier, Make, n8n, Lindy and Comet. Who each one suits, how pricing works, and an honest verdict on each."
   },
   {
     "slug": "productivity",
     "name": "Productivity",
     "headline": "Best AI assistants for everyday work",
     "tagline": "Everyday assistants and work apps.",
-    "intro": "General AI assistants and the AI built into notes, email and docs. Start here if you want one tool that covers a lot of ground."
+    "intro": "General AI assistants and the AI built into notes, email and docs. Start here if you want one tool that covers a lot of ground.",
+    "summary": "ChatGPT is the best all-round AI assistant for most people. Choose Claude for careful writing and long documents, and pick the assistant built into the suite you already use: Gemini for Gmail and Google Docs, Microsoft 365 Copilot for Office, Notion AI for Notion.",
+    "meta_description": "The best AI assistants for everyday work, compared: ChatGPT, Claude, Gemini, Microsoft 365 Copilot and Notion AI. Who each suits, prices and honest verdicts."
   },
   {
     "slug": "data",
     "name": "Data",
     "headline": "Best AI tools for data and spreadsheets",
     "tagline": "Spreadsheets, analysis and SQL.",
-    "intro": "Tools that clean data, write formulas and queries, and turn questions into charts. Check the numbers they give you against the source before you share them."
+    "intro": "Tools that clean data, write formulas and queries, and turn questions into charts. Check the numbers they give you against the source before you share them.",
+    "summary": "For a spreadsheet with AI help built in, Rows is the friendliest start. Choose Better Analyst if you don't code and want answers and dashboards, Quadratic if you can read some code, Hex for analysts who work in SQL or Python, and ThoughtSpot for companies with a data warehouse.",
+    "meta_description": "The best AI tools for data and spreadsheets, compared: Rows, Better Analyst, Quadratic, Hex and ThoughtSpot. Who each suits, real prices and an honest verdict."
   },
   {
     "slug": "meetings",
     "name": "Meetings",
     "headline": "Best AI tools for meeting notes",
     "tagline": "Notes, transcripts and follow-ups.",
-    "intro": "Note-takers that join or record your calls, then produce transcripts, summaries and action items. Tell people when a call is being recorded."
+    "intro": "Note-takers that join or record your calls, then produce transcripts, summaries and action items. Tell people when a call is being recorded.",
+    "summary": "For most people, Fathom is the best free AI note taker: its free plan includes unlimited recordings and transcripts. Choose Granola if you don't want a bot in your calls, Fireflies.ai for a searchable archive of every team meeting, and Otter.ai for a simple, low-cost transcript.",
+    "meta_description": "The best AI note takers for meetings, compared: Fathom, Fireflies.ai, Granola, Otter.ai and tl;dv. Free plan limits, bot or no bot, and an honest verdict."
   }
 ]

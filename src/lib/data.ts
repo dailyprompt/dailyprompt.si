@@ -28,6 +28,8 @@ export interface Category {
   headline: string; // "Best AI tools for ..." page and lead-story headline
   tagline: string;
   intro: string;
+  summary: string; // quotable "short answer": which tool is best for whom
+  meta_description: string; // 150-160 characters
 }
 
 export const tools = toolsJson as Tool[];
@@ -80,6 +82,23 @@ export function getEdition(date: string) {
   return editions.find((e) => e.date === date);
 }
 
+// Tool names that are also everyday words; never auto-linked from prose.
+const GENERIC_NAMES = new Set(["Make", "Rows", "Hex", "Pika", "Gemini", "Claude", "Codex", "Comet"]);
+
+// Directory tools an edition talks about: its new_tools plus any tool named
+// (case-sensitive, whole word) in its headline, dek or top stories.
+export function toolsInEdition(e: Edition) {
+  const text = [e.headline, e.dek, ...e.top_news.flatMap((n) => [n.title, n.summary])].join(" ");
+  const named = tools.filter(
+    (t) =>
+      !GENERIC_NAMES.has(t.name) &&
+      new RegExp(`(^|[^\\w])${t.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}([^\\w]|$)`).test(text),
+  );
+  const fromNew = e.new_tools.map((nt) => (nt.slug ? getTool(nt.slug) : undefined));
+  const seen = new Set<string>();
+  return [...fromNew, ...named].filter((t): t is Tool => !!t && !seen.has(t.slug) && !!seen.add(t.slug));
+}
+
 // "New this week": tools from The Daily Prompt's new_tools in the editions of
 // the 7 days up to the latest edition, limited to ones in the directory
 // (every directory entry has been checked against its official site).
@@ -128,6 +147,11 @@ export function leadCategory(): Category {
 const FEATURED = ["claude-code", "perplexity", "granola", "elevenlabs", "canva"];
 export function featuredTools() {
   return FEATURED.map(getTool).filter((t): t is Tool => !!t);
+}
+
+// When a category's entries were last checked: the newest `updated` date.
+export function lastUpdated(slug: string) {
+  return toolsInCategory(slug).reduce((m, t) => (t.updated > m ? t.updated : m), "");
 }
 
 export function hostname(url: string) {
