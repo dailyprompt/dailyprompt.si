@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { Search, type SearchItem } from "@/components/Search";
 import { PricingTag } from "@/components/ToolCard";
 import { TodayInBrief } from "@/components/TodayInBrief";
@@ -12,6 +14,9 @@ import {
   tools,
   toolsInCategory,
 } from "@/lib/data";
+import { organizationLd } from "@/lib/seo";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 const searchItems: SearchItem[] = tools.map((t) => {
   const categoryName = getCategory(t.category)?.name ?? t.category;
@@ -39,6 +44,7 @@ export default function Home() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <JsonLd data={organizationLd()} />
       <section className="mx-auto max-w-2xl py-8">
         <Search
           items={searchItems}

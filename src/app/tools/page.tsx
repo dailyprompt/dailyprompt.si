@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { PricingTag } from "@/components/ToolCard";
+import { breadcrumbLd } from "@/lib/seo";
 import { categories, tools, toolsInCategory } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
 export default function AllToolsPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <JsonLd data={breadcrumbLd([["All tools", "/tools"]])} />
       <header className="mx-auto max-w-3xl py-10 text-center">
         <h1 className="font-display text-4xl font-bold sm:text-5xl">All tools</h1>
         <p className="mt-3 text-lg italic">

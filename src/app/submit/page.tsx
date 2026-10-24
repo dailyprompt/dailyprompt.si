@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { SubmitForm } from "@/components/SubmitForm";
+import { breadcrumbLd } from "@/lib/seo";
 import { categories } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Submit a tool",
   description: "Suggest an AI tool for The Daily Prompt directory. Every submission is reviewed by hand.",
+  alternates: { canonical: "/submit" },
 };
 
 export default function SubmitPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6">
+      <JsonLd data={breadcrumbLd([["Submit a tool", "/submit"]])} />
       <h1 className="font-display text-4xl font-bold">Submit a tool</h1>
       <p className="mt-4 text-lg italic">
         Know an AI tool that belongs here? Tell us about it. We open every

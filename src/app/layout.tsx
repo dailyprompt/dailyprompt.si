@@ -33,8 +33,10 @@ export const metadata: Metadata = {
     "A directory of AI tools sorted by what you want to get done, with short, honest verdicts. Updated every weekday.",
   openGraph: {
     siteName: "The Daily Prompt",
-    images: [{ url: "/masthead.png", width: 2141, height: 734, alt: "The Daily Prompt" }],
+    type: "website",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "The Daily Prompt" }],
   },
+  twitter: { card: "summary_large_image" },
 };
 
 const SECTIONS = [

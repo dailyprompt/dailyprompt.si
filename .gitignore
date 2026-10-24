@@ -48,3 +48,6 @@ next-env.d.ts
 
 # iCloud conflict copies (e.g. "page 2.tsx")
 * [0-9].*
+
+# private notes (SEO research, AI visibility log)
+/docs/
