@@ -46,7 +46,7 @@ export default async function CategoryPage({ params }: PageProps<"/categories/[s
         <p className="mx-auto mt-4 max-w-3xl text-lg italic">{c.intro}</p>
         <p className="mt-4 text-sm text-muted">
           Last updated <time dateTime={updated}>{formatDate(updated)}</time> &middot; {list.length} tools &middot;{" "}
-          <Link href="/about" className="link">How we review</Link>
+          <Link href="/about#how-we-review" className="link">How we review</Link>
         </p>
       </header>
 
@@ -110,7 +110,10 @@ export default async function CategoryPage({ params }: PageProps<"/categories/[s
                 <PricingTag pricing={t.pricing} />
                 <span aria-hidden="true"> &middot; </span>
                 <span className="text-muted">
-                  Checked <time dateTime={t.updated}>{formatDate(t.updated)}</time>
+                  Checked <time dateTime={t.updated}>{formatDate(t.updated)}</time> against{" "}
+                  <a href={t.source_url} target="_blank" rel="noopener" className="link">
+                    the official site
+                  </a>
                 </span>
               </p>
               <p className="mt-2 text-sm">

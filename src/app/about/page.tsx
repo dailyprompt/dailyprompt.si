@@ -31,7 +31,7 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <H2>How we pick and review tools</H2>
+      <H2 id="how-we-review">How we pick and review tools</H2>
       <ul className="mt-4 flex list-disc flex-col gap-2 pl-5 leading-relaxed">
         <li>We open every tool&apos;s official site before it goes in the directory.</li>
         <li>We write our own descriptions. We don&apos;t copy marketing copy or other directories.</li>
@@ -43,6 +43,10 @@ export default function AboutPage() {
         </li>
         <li>We check the directory every weekday and update tools when they change.</li>
       </ul>
+      <p className="mt-4 leading-relaxed">
+        This site is built with Claude. We hold Anthropic&apos;s tools to the
+        same standard as everyone else&apos;s.
+      </p>
 
       <H2 id="sponsorship">How sponsorship works</H2>
       <p className="mt-4 leading-relaxed">
